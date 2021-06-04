@@ -7,10 +7,12 @@ trigger:
 - master
 
 pool:
+# https://docs.microsoft.com/en-us/azure/devops/pipelines/agents/hosted?view=azure-devops&tabs=yaml
+# #'windows-2019'
   vmImage: ubuntu-latest
 
 variables:
-  buildConfiguration: 'Release'
+  buildConfiguration: 'Release' 
 
 steps:
 - script: dotnet build --configuration $(buildConfiguration)
